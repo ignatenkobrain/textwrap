@@ -21,8 +21,11 @@ script:
   - cargo test --verbose --features "$FEATURES"
 
 env:
-  - FEATURES=""
-  - FEATURES="hyphenation"
+  global:
+    - CARGO_INCREMENTAL=1
+  matrix:
+    - FEATURES=""
+    - FEATURES="hyphenation"
 
 matrix:
   include:
