@@ -1,4 +1,5 @@
 environment:
+  - CARGO_INCREMENTAL: 1
   matrix:
   - TOOLCHAIN: stable
     FEATURES: "hyphenation"
